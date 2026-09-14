@@ -543,3 +543,10 @@ This software is currently a research/development prototype.
 The supplied example workbooks contain synthetic or modified records for workflow testing and should **not** be treated as publication-ready datasets.
 
 Always review validation findings before using outputs for scientific publication or submission to external repositories.
+
+
+## Acknowledgements
+
+This prototype integrates validation functionality from **FAIRe-fier**, developed at CSIRO by Suk Yee Yong. FAIRe-fier is used for validation of FAIRe `projectMetadata` and `sampleMetadata`.
+
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for citation and licensing information.

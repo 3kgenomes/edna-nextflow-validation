@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "eDNA FAIRe engine integration test",
+  "type": "object",
+  "properties": {
+    "input": {
+      "type": "string",
+      "format": "file-path"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "pre_lab",
+        "lab_return"
+      ],
+      "default": "pre_lab"
+    },
+    "outdir": {
+      "type": "string",
+      "default": "results"
+    },
+    "fairefier_checklist": {
+      "type": "string",
+      "format": "file-path",
+      "description": "Path to the FAIRe checklist workbook used by the FAIRe-fier batch validator."
+    },
+    "context_qc_config": {
+      "type": "string",
+      "format": "file-path",
+      "description": "JSON configuration for project-specific coordinate and measurement QC."
+    }
+  },
+  "required": [
+    "input"
+  ]
+}

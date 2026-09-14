@@ -1,0 +1,36 @@
+# Nextflow runtime
+work/
+.nextflow/
+.nextflow.log*
+.nextflow.history
+
+# Results
+results*/
+results_*/
+
+# Nextflow reports
+trace.tsv
+timeline.html
+nextflow_report.html
+workflow_dag.html
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environments
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+~$*

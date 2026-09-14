@@ -1,0 +1,86 @@
+{
+  "region": {
+    "name": "Southern Australia and adjacent marine waters - development default",
+    "min_latitude": -50.0,
+    "max_latitude": -10.0,
+    "min_longitude": 110.0,
+    "max_longitude": 180.0,
+    "expected_latitude_hemisphere": "south",
+    "expected_longitude_hemisphere": "east"
+  },
+  "measurement_rules": [
+    {
+      "name": "water_sample_volume",
+      "value_field": "samp_size",
+      "unit_field": "samp_size_unit",
+      "when": {
+        "field": "samp_collect_device",
+        "values": [
+          "niskin bottle",
+          "OCD_1L_Water"
+        ],
+        "case_sensitive": false
+      },
+      "canonical_unit": "L",
+      "allowed_units": {
+        "L": 1.0,
+        "mL": 0.001,
+        "uL": 1e-06,
+        "\u00b5L": 1e-06,
+        "\u03bcL": 1e-06
+      },
+      "unit_aliases": {
+        "l": "L",
+        "litre": "L",
+        "litres": "L",
+        "liter": "L",
+        "liters": "L",
+        "ml": "mL",
+        "millilitre": "mL",
+        "millilitres": "mL",
+        "milliliter": "mL",
+        "milliliters": "mL",
+        "ul": "uL",
+        "\u00b5l": "\u00b5L",
+        "\u03bcl": "\u03bcL",
+        "microlitre": "uL",
+        "microlitres": "uL",
+        "microliter": "uL",
+        "microliters": "uL"
+      },
+      "plausible_min_canonical": 0.1,
+      "plausible_max_canonical": 100.0,
+      "plausibility_message": "Water sample volume is outside the configured 0.1-100 L development range. Check the numeric value and whether L/mL was entered correctly."
+    },
+    {
+      "name": "tow_distance",
+      "value_field": "samp_size",
+      "unit_field": "samp_size_unit",
+      "when": {
+        "field": "samp_collect_device",
+        "values": [
+          "Tow"
+        ],
+        "case_sensitive": false
+      },
+      "canonical_unit": "km",
+      "allowed_units": {
+        "km": 1.0,
+        "m": 0.001
+      },
+      "unit_aliases": {
+        "kilometre": "km",
+        "kilometres": "km",
+        "kilometer": "km",
+        "kilometers": "km",
+        "metre": "m",
+        "metres": "m",
+        "meter": "m",
+        "meters": "m"
+      },
+      "plausible_min_canonical": 0.05,
+      "plausible_max_canonical": 50.0,
+      "plausibility_message": "Tow distance is outside the configured 0.05-50 km development range. Check the value/unit."
+    }
+  ]
+}
